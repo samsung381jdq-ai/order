@@ -2,19 +2,11 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
-
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>桃園區農會｜文旦・中秋禮盒訂單查詢</title>
 
 <style>
-
-/* =========================================================
-   全域
-   ========================================================= */
 
 * {
   box-sizing: border-box;
@@ -27,23 +19,18 @@ html {
 body {
   margin: 0;
   padding: 0;
-
   font-family:
     "Microsoft JhengHei",
     "Noto Sans TC",
     Arial,
     sans-serif;
-
   color: #3d332a;
-
-  background:
-    linear-gradient(
-      180deg,
-      #fff8e9 0%,
-      #fffdf8 48%,
-      #f7f1e5 100%
-    );
-
+  background: linear-gradient(
+    180deg,
+    #fff8e9 0%,
+    #fffdf8 48%,
+    #f7f1e5 100%
+  );
   min-height: 100vh;
 }
 
@@ -52,21 +39,11 @@ input {
   font-family: inherit;
 }
 
-
-/* =========================================================
-   主畫面
-   ========================================================= */
-
 .app {
   width: 100%;
   max-width: 900px;
-
   margin: 0 auto;
-
-  padding:
-    22px
-    16px
-    50px;
+  padding: 22px 16px 50px;
 }
 
 
@@ -76,187 +53,99 @@ input {
 
 .hero {
   text-align: center;
-
-  padding:
-    18px
-    10px
-    16px;
+  padding: 18px 10px 16px;
 }
 
 .hero-badge {
   display: inline-block;
-
   margin-bottom: 10px;
-
-  padding:
-    6px
-    15px;
-
+  padding: 6px 15px;
   border-radius: 999px;
-
   background: #71863d;
-
   color: white;
-
   font-size: 13px;
-
   font-weight: 900;
-
   letter-spacing: 1px;
 }
 
 .hero h1 {
-  margin:
-    0
-    0
-    7px;
-
+  margin: 0 0 7px;
   color: #693c20;
-
   font-size: 30px;
-
   font-weight: 900;
 }
 
 .hero p {
   margin: 0;
-
   color: #806b57;
-
   font-size: 15px;
-
   font-weight: 700;
 }
 
 
 /* =========================================================
-   查詢框
+   查詢
    ========================================================= */
 
 .search-card {
   width: 100%;
-
-  margin:
-    0
-    auto
-    22px;
-
+  margin: 0 auto 22px;
   padding: 22px;
-
-  border:
-    1px solid
-    #e8d8c1;
-
+  border: 1px solid #e8d8c1;
   border-radius: 18px;
-
-  background:
-    rgba(
-      255,
-      255,
-      255,
-      0.97
-    );
-
-  box-shadow:
-    0 8px 24px
-    rgba(
-      100,
-      70,
-      35,
-      0.09
-    );
+  background: rgba(255,255,255,0.97);
+  box-shadow: 0 8px 24px rgba(100,70,35,0.09);
 }
 
 .search-title {
   margin-bottom: 7px;
-
   text-align: center;
-
   color: #5d3a22;
-
   font-size: 20px;
-
   font-weight: 900;
 }
 
 .search-help {
   margin-bottom: 15px;
-
   text-align: center;
-
   color: #8b7763;
-
   font-size: 13px;
 }
 
 .search-row {
   display: flex;
-
   gap: 9px;
 }
 
 #keyword {
   flex: 1;
-
   min-width: 0;
-
   height: 52px;
-
-  padding:
-    0
-    16px;
-
-  border:
-    2px solid
-    #dac7ac;
-
+  padding: 0 16px;
+  border: 2px solid #dac7ac;
   border-radius: 12px;
-
   outline: none;
-
   background: white;
-
   color: #333;
-
   font-size: 17px;
-
   font-weight: 800;
 }
 
 #keyword:focus {
   border-color: #879d4b;
-
-  box-shadow:
-    0 0 0 3px
-    rgba(
-      135,
-      157,
-      75,
-      0.13
-    );
+  box-shadow: 0 0 0 3px rgba(135,157,75,0.13);
 }
 
 #searchBtn {
   min-width: 115px;
-
   height: 52px;
-
-  padding:
-    0
-    18px;
-
+  padding: 0 18px;
   border: none;
-
   border-radius: 12px;
-
   cursor: pointer;
-
   background: #6d843c;
-
   color: white;
-
   font-size: 16px;
-
   font-weight: 900;
 }
 
@@ -266,7 +155,6 @@ input {
 
 #searchBtn:disabled {
   opacity: 0.6;
-
   cursor: not-allowed;
 }
 
@@ -277,19 +165,11 @@ input {
 
 .message {
   display: none;
-
-  margin:
-    15px
-    0;
-
+  margin: 15px 0;
   padding: 15px;
-
   border-radius: 12px;
-
   text-align: center;
-
   font-size: 15px;
-
   font-weight: 800;
 }
 
@@ -299,42 +179,27 @@ input {
 
 .message.info {
   color: #66552e;
-
   background: #fff7d9;
-
-  border:
-    1px solid
-    #ead486;
+  border: 1px solid #ead486;
 }
 
 .message.error {
   color: #8b3030;
-
   background: #fff0f0;
-
-  border:
-    1px solid
-    #edbbbb;
+  border: 1px solid #edbbbb;
 }
 
 
 /* =========================================================
-   結果工具列
+   工具列
    ========================================================= */
 
 .result-toolbar {
   display: none;
-
   align-items: center;
-
-  justify-content:
-    space-between;
-
+  justify-content: space-between;
   gap: 12px;
-
-  margin:
-    14px
-    0;
+  margin: 14px 0;
 }
 
 .result-toolbar.show {
@@ -343,65 +208,43 @@ input {
 
 .result-summary {
   color: #574737;
-
   font-size: 16px;
-
   font-weight: 900;
 }
 
 .toolbar-actions {
   display: flex;
-
   align-items: center;
-
   gap: 8px;
 }
 
 .toolbar-btn {
   border: none;
-
   border-radius: 10px;
-
-  padding:
-    10px
-    15px;
-
+  padding: 10px 15px;
   cursor: pointer;
-
   font-size: 14px;
-
   font-weight: 900;
 }
 
 .toolbar-btn.print {
   background: #4e7034;
-
   color: white;
 }
 
 .toolbar-btn.again {
   background: #eee5d8;
-
   color: #62462e;
 }
 
 
 /* =========================================================
-   網頁訂單排列
+   訂單排列
    ========================================================= */
 
 #screenOrders {
   display: grid;
-
-  grid-template-columns:
-    repeat(
-      2,
-      minmax(
-        0,
-        1fr
-      )
-    );
-
+  grid-template-columns: repeat(2, minmax(0,1fr));
   gap: 15px;
 }
 
@@ -412,143 +255,113 @@ input {
 
 .order-card {
   position: relative;
-
   width: 100%;
-
   padding: 18px;
-
-  border:
-    1px solid
-    #d8d0c7;
-
+  border: 1px solid #d8d0c7;
   border-radius: 16px;
-
   background: white;
-
-  box-shadow:
-    0 5px 18px
-    rgba(
-      65,
-      48,
-      31,
-      0.07
-    );
-
+  box-shadow: 0 5px 18px rgba(65,48,31,0.07);
   overflow: hidden;
 }
 
 .order-card::before {
   content: "";
-
   position: absolute;
-
   top: 0;
-
   bottom: 0;
-
   left: 0;
-
   width: 5px;
-
-  background:
-    var(
-      --order-color,
-      #6f863e
-    );
-}
-
-.order-title {
-  display: flex;
-
-  align-items: center;
-
-  gap: 7px;
-
-  margin:
-    0
-    0
-    12px;
-
-  padding-bottom: 10px;
-
-  border-bottom:
-    1px solid
-    #e2ddd7;
-
-  color: #3e352c;
-
-  font-size: 18px;
-
-  line-height: 1.1;
-
-  font-weight: 900;
-}
-
-.order-type-dot {
-  flex:
-    0 0 auto;
-
-  width: 13px;
-
-  height: 13px;
-
-  border:
-    2px solid
-    #333;
-
-  border-radius: 50%;
-
-  background:
-    var(
-      --order-color,
-      #777
-    );
+  background: var(--order-color,#6f863e);
 }
 
 
 /* =========================================================
-   基本資料
+   標題列
+   ========================================================= */
+
+.order-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0 0 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2ddd7;
+}
+
+.order-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #3e352c;
+  font-size: 18px;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.order-type-dot {
+  flex: 0 0 auto;
+  width: 13px;
+  height: 13px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  background: var(--order-color,#777);
+}
+
+
+/* =========================================================
+   已打單
+   ========================================================= */
+
+.done-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+  color: #222;
+  font-size: 15px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.done-square {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #333;
+  background: #fff;
+  display: inline-block;
+}
+
+
+/* =========================================================
+   資料
    ========================================================= */
 
 .info-row {
   margin-bottom: 8px;
-
   padding-bottom: 7px;
-
-  border-bottom:
-    1px solid
-    #f0ece8;
+  border-bottom: 1px solid #f0ece8;
 }
 
 .info-label {
   display: block;
-
   margin-bottom: 2px;
-
   color: #8b7d70;
-
   font-size: 11px;
-
   font-weight: 700;
 }
 
 .info-value {
   display: block;
-
   color: #2e2924;
-
   font-size: 15px;
-
   line-height: 1.25;
-
   font-weight: 800;
-
   word-break: break-word;
 }
 
 .customer-value {
   font-size: 18px;
-
   font-weight: 900;
 }
 
@@ -563,87 +376,62 @@ input {
 
 .product-title {
   margin-bottom: 7px;
-
   color: #726455;
-
   font-size: 12px;
-
   font-weight: 900;
 }
 
 .product-row {
   margin-bottom: 8px;
-
   color: #27221e;
-
   font-size: 14px;
-
   line-height: 1.35;
 }
 
 .product-main {
   font-weight: 900;
-
   word-break: break-word;
 }
 
 .product-calculation {
   margin-top: 2px;
-
   color: #4e4338;
-
   font-size: 13px;
-
   font-weight: 800;
 }
 
 
 /* =========================================================
-   訂單金額
+   總金額
    ========================================================= */
 
 .total-row {
   display: flex;
-
   align-items: center;
-
-  justify-content:
-    space-between;
-
+  justify-content: space-between;
   gap: 10px;
-
   margin-top: 12px;
-
   padding-top: 10px;
-
-  border-top:
-    1px dashed
-    #bbb1a8;
+  border-top: 1px dashed #bbb1a8;
 }
 
 .total-label {
   color: #574a3d;
-
   font-size: 13px;
-
   font-weight: 900;
 }
 
 .total-amount {
   color: #38502b;
-
   font-size: 22px;
-
   line-height: 1;
-
   font-weight: 900;
-
   white-space: nowrap;
 }
 
 
 /* =========================================================
-   列印區平常隱藏
+   列印區
    ========================================================= */
 
 #printArea {
@@ -658,10 +446,7 @@ input {
 @media (max-width: 650px) {
 
   .app {
-    padding:
-      12px
-      10px
-      35px;
+    padding: 12px 10px 35px;
   }
 
   .hero h1 {
@@ -685,193 +470,91 @@ input {
   }
 
   .result-toolbar {
-    align-items:
-      flex-start;
-
-    flex-direction:
-      column;
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .toolbar-actions {
     width: 100%;
-
-    justify-content:
-      flex-end;
+    justify-content: flex-end;
   }
-
 }
 
 
 /* =========================================================
-   ★ A4 列印
-   ★ 一頁 6 張
-   ★ 2欄 × 3列
-   ★ 大字美化版
+   列印 A4
    ========================================================= */
 
 @media print {
 
   @page {
     size: A4 portrait;
-
     margin: 5mm;
   }
 
   html,
   body {
     width: 210mm !important;
-
     margin: 0 !important;
-
     padding: 0 !important;
-
     background: white !important;
-
-    -webkit-print-color-adjust:
-      exact !important;
-
-    print-color-adjust:
-      exact !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 
   body * {
-    visibility:
-      hidden !important;
+    visibility: hidden !important;
   }
 
   #printArea,
   #printArea * {
-    visibility:
-      visible !important;
+    visibility: visible !important;
   }
 
   #printArea {
-    display:
-      block !important;
-
-    position:
-      absolute !important;
-
+    display: block !important;
+    position: absolute !important;
     left: 0 !important;
-
     top: 0 !important;
-
-    width:
-      100% !important;
-
-    margin:
-      0 !important;
-
-    padding:
-      0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
-
-  /* =====================================================
-     每一頁
-     ===================================================== */
-
   .print-page {
-    display:
-      grid !important;
-
-    grid-template-columns:
-      repeat(
-        2,
-        1fr
-      ) !important;
-
-    grid-template-rows:
-      repeat(
-        3,
-        91mm
-      ) !important;
-
-    column-gap:
-      3mm !important;
-
-    row-gap:
-      3mm !important;
-
-    width:
-      200mm !important;
-
-    min-height:
-      279mm !important;
-
-    margin:
-      0 auto !important;
-
-    padding:
-      0 !important;
-
-    break-after:
-      page !important;
-
-    page-break-after:
-      always !important;
+    display: grid !important;
+    grid-template-columns: repeat(2,1fr) !important;
+    grid-template-rows: repeat(3,91mm) !important;
+    column-gap: 3mm !important;
+    row-gap: 3mm !important;
+    width: 200mm !important;
+    min-height: 279mm !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    break-after: page !important;
+    page-break-after: always !important;
   }
 
   .print-page:last-child {
-    break-after:
-      auto !important;
-
-    page-break-after:
-      auto !important;
+    break-after: auto !important;
+    page-break-after: auto !important;
   }
 
-
-  /* =====================================================
-     卡片
-     ===================================================== */
-
   .print-card {
-    position:
-      relative !important;
-
-    box-sizing:
-      border-box !important;
-
-    width:
-      100% !important;
-
-    height:
-      91mm !important;
-
-    margin:
-      0 !important;
-
-    padding:
-      3.5mm
-      4mm
-      3mm
-      4mm !important;
-
-    border:
-      1.3px solid
-      #777 !important;
-
-    border-radius:
-      2.7mm !important;
-
-    background:
-      white !important;
-
-    color:
-      #000 !important;
-
-    box-shadow:
-      none !important;
-
-    overflow:
-      hidden !important;
-
-    break-inside:
-      avoid !important;
-
-    page-break-inside:
-      avoid !important;
-
+    position: relative !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    height: 91mm !important;
+    margin: 0 !important;
+    padding: 3.5mm 4mm 3mm 4mm !important;
+    border: 1.3px solid #777 !important;
+    border-radius: 2.7mm !important;
+    background: white !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
     font-family:
       "Microsoft JhengHei",
       "Noto Sans TC",
@@ -879,306 +562,146 @@ input {
       sans-serif !important;
   }
 
-
-  /* =====================================================
-     標題
-     ===================================================== */
+  .print-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 2mm !important;
+    margin: 0 0 1.7mm 0 !important;
+    padding: 0 0 1.3mm 0 !important;
+    border-bottom: 1px solid #aaa !important;
+  }
 
   .print-order-title {
-    display:
-      flex !important;
-
-    align-items:
-      center !important;
-
-    gap:
-      1.5mm !important;
-
-    margin:
-      0
-      0
-      1.7mm
-      0 !important;
-
-    padding:
-      0
-      0
-      1.3mm
-      0 !important;
-
-    border-bottom:
-      1px solid
-      #aaa !important;
-
-    color:
-      #111 !important;
-
-    font-size:
-      16px !important;
-
-    line-height:
-      1 !important;
-
-    font-weight:
-      900 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.5mm !important;
+    color: #111 !important;
+    font-size: 16px !important;
+    line-height: 1 !important;
+    font-weight: 900 !important;
   }
 
   .print-dot {
-    width:
-      3.5mm !important;
-
-    height:
-      3.5mm !important;
-
-    flex:
-      0 0
-      3.5mm !important;
-
-    border:
-      1px solid
-      #333 !important;
-
-    border-radius:
-      50% !important;
-
-    background:
-      #777 !important;
+    width: 3.5mm !important;
+    height: 3.5mm !important;
+    flex: 0 0 3.5mm !important;
+    border: 1px solid #333 !important;
+    border-radius: 50% !important;
+    background: #777 !important;
   }
 
+  .print-done {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.2mm !important;
+    color: #111 !important;
+    font-size: 11.5px !important;
+    font-weight: 900 !important;
+    white-space: nowrap !important;
+  }
 
-  /* =====================================================
-     訂購資料
-     ===================================================== */
+  .print-done-square {
+    width: 5mm !important;
+    height: 5mm !important;
+    border: 1.4px solid #222 !important;
+    display: inline-block !important;
+    background: white !important;
+  }
 
   .print-info-row {
-    margin:
-      0
-      0
-      1.1mm
-      0 !important;
-
-    padding:
-      0
-      0
-      0.8mm
-      0 !important;
-
-    border-bottom:
-      1px solid
-      #dedede !important;
+    margin: 0 0 1.1mm 0 !important;
+    padding: 0 0 0.8mm 0 !important;
+    border-bottom: 1px solid #dedede !important;
   }
 
   .print-label {
-    display:
-      block !important;
-
-    margin:
-      0
-      0
-      0.3mm
-      0 !important;
-
-    color:
-      #444 !important;
-
-    font-size:
-      9px !important;
-
-    line-height:
-      1 !important;
-
-    font-weight:
-      700 !important;
+    display: block !important;
+    margin: 0 0 0.3mm 0 !important;
+    color: #444 !important;
+    font-size: 9px !important;
+    line-height: 1 !important;
+    font-weight: 700 !important;
   }
 
   .print-value {
-    display:
-      block !important;
-
-    color:
-      #000 !important;
-
-    font-size:
-      12px !important;
-
-    line-height:
-      1.08 !important;
-
-    font-weight:
-      800 !important;
-
-    word-break:
-      break-word !important;
+    display: block !important;
+    color: #000 !important;
+    font-size: 12px !important;
+    line-height: 1.08 !important;
+    font-weight: 800 !important;
+    word-break: break-word !important;
   }
-
-
-  /* 訂購人最大 */
 
   .print-customer {
-    font-size:
-      14px !important;
-
-    font-weight:
-      900 !important;
+    font-size: 14px !important;
+    font-weight: 900 !important;
   }
 
-
-  /* =====================================================
-     商品標題
-     ===================================================== */
-
   .print-product-section {
-    margin-top:
-      1.3mm !important;
+    margin-top: 1.3mm !important;
   }
 
   .print-product-title {
-    margin:
-      0
-      0
-      0.8mm
-      0 !important;
-
-    color:
-      #333 !important;
-
-    font-size:
-      9.5px !important;
-
-    line-height:
-      1 !important;
-
-    font-weight:
-      900 !important;
+    margin: 0 0 0.8mm 0 !important;
+    color: #333 !important;
+    font-size: 9.5px !important;
+    line-height: 1 !important;
+    font-weight: 900 !important;
   }
 
-
-  /* =====================================================
-     商品
-     ===================================================== */
-
   .print-product-row {
-    margin:
-      0
-      0
-      1.3mm
-      0 !important;
-
-    padding:
-      0 !important;
-
-    color:
-      #000 !important;
+    margin: 0 0 1.3mm 0 !important;
+    padding: 0 !important;
+    color: #000 !important;
   }
 
   .print-product-main {
-    font-size:
-      11.5px !important;
-
-    line-height:
-      1.15 !important;
-
-    font-weight:
-      900 !important;
-
-    word-break:
-      break-word !important;
+    font-size: 11.5px !important;
+    line-height: 1.15 !important;
+    font-weight: 900 !important;
+    word-break: break-word !important;
   }
 
   .print-product-calculation {
-    margin-top:
-      0.4mm !important;
-
-    color:
-      #222 !important;
-
-    font-size:
-      10.5px !important;
-
-    line-height:
-      1.1 !important;
-
-    font-weight:
-      800 !important;
+    margin-top: 0.4mm !important;
+    color: #222 !important;
+    font-size: 10.5px !important;
+    line-height: 1.1 !important;
+    font-weight: 800 !important;
   }
 
-
-  /* =====================================================
-     ★ 訂單金額
-     ===================================================== */
-
   .print-total {
-    display:
-      flex !important;
-
-    justify-content:
-      space-between !important;
-
-    align-items:
-      center !important;
-
-    gap:
-      2mm !important;
-
-    margin:
-      1.7mm
-      0
-      0
-      0 !important;
-
-    padding:
-      1.4mm
-      0
-      0
-      0 !important;
-
-    border-top:
-      1px dashed
-      #888 !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 2mm !important;
+    margin: 1.7mm 0 0 0 !important;
+    padding: 1.4mm 0 0 0 !important;
+    border-top: 1px dashed #888 !important;
   }
 
   .print-total-label {
-    color:
-      #111 !important;
-
-    font-size:
-      10.5px !important;
-
-    font-weight:
-      900 !important;
+    color: #111 !important;
+    font-size: 10.5px !important;
+    font-weight: 900 !important;
   }
 
   .print-total-amount {
-    color:
-      #000 !important;
-
-    white-space:
-      nowrap !important;
-
-    font-size:
-      17px !important;
-
-    line-height:
-      1 !important;
-
-    font-weight:
-      900 !important;
+    color: #000 !important;
+    white-space: nowrap !important;
+    font-size: 17px !important;
+    line-height: 1 !important;
+    font-weight: 900 !important;
   }
-
 }
 
 </style>
 </head>
 
-
 <body>
 
-<div
-  class="app"
-  id="app"
->
-
-  <!-- 標題 -->
+<div class="app">
 
   <section class="hero">
 
@@ -1196,8 +719,6 @@ input {
 
   </section>
 
-
-  <!-- 查詢 -->
 
   <section class="search-card">
 
@@ -1230,15 +751,11 @@ input {
   </section>
 
 
-  <!-- 訊息 -->
-
   <div
     id="message"
     class="message"
   ></div>
 
-
-  <!-- 工具列 -->
 
   <div
     id="resultToolbar"
@@ -1249,7 +766,6 @@ input {
       id="resultSummary"
       class="result-summary"
     ></div>
-
 
     <div class="toolbar-actions">
 
@@ -1274,14 +790,10 @@ input {
   </div>
 
 
-  <!-- 畫面訂單 -->
-
   <div id="screenOrders"></div>
 
 </div>
 
-
-<!-- 真正列印區 -->
 
 <div id="printArea"></div>
 
@@ -1289,16 +801,11 @@ input {
 <script>
 
 /* =========================================================
-   ★ 最新 Apps Script API
+   Apps Script API
    ========================================================= */
 
 const API_URL =
   'https://script.google.com/macros/s/AKfycbycfVxwVOPJ531qeYWKfn2loVj1_9-PA_ZyqLbU1Cz8MhzB1UCBXMbzRM6vxqohlIQh/exec';
-
-
-/* =========================================================
-   目前訂單
-   ========================================================= */
 
 let currentOrders = [];
 
@@ -1312,50 +819,35 @@ document.addEventListener(
   function () {
 
     const keyword =
-      document.getElementById(
-        'keyword'
-      );
+      document.getElementById('keyword');
 
     const searchBtn =
-      document.getElementById(
-        'searchBtn'
-      );
-
+      document.getElementById('searchBtn');
 
     searchBtn.addEventListener(
       'click',
       searchOrders
     );
 
-
     keyword.addEventListener(
       'keydown',
       function (event) {
 
-        if (
-          event.key ===
-          'Enter'
-        ) {
+        if (event.key === 'Enter') {
 
           event.preventDefault();
 
           searchOrders();
-
         }
-
       }
     );
 
-
     setTimeout(
       function () {
-
         keyword.focus();
-
       },
       200
     );
-
   }
 );
 
@@ -1367,21 +859,13 @@ document.addEventListener(
 function searchOrders() {
 
   const keywordInput =
-    document.getElementById(
-      'keyword'
-    );
+    document.getElementById('keyword');
 
   const searchBtn =
-    document.getElementById(
-      'searchBtn'
-    );
-
+    document.getElementById('searchBtn');
 
   const keyword =
-    String(
-      keywordInput.value ||
-      ''
-    ).trim();
+    String(keywordInput.value || '').trim();
 
 
   if (!keyword) {
@@ -1394,7 +878,6 @@ function searchOrders() {
     keywordInput.focus();
 
     return;
-
   }
 
 
@@ -1402,32 +885,21 @@ function searchOrders() {
 
   clearResults();
 
-
-  searchBtn.disabled =
-    true;
-
-  searchBtn.textContent =
-    '查詢中...';
+  searchBtn.disabled = true;
+  searchBtn.textContent = '查詢中...';
 
 
   jsonpRequest(
 
     {
-      action:
-        'search',
-
-      keyword:
-        keyword
+      action: 'search',
+      keyword: keyword
     },
-
 
     function (data) {
 
-      searchBtn.disabled =
-        false;
-
-      searchBtn.textContent =
-        '查詢訂單';
+      searchBtn.disabled = false;
+      searchBtn.textContent = '查詢訂單';
 
 
       if (!data) {
@@ -1438,40 +910,27 @@ function searchOrders() {
         );
 
         return;
-
       }
 
 
-      if (
-        data.success !==
-        true
-      ) {
+      if (data.success !== true) {
 
         showMessage(
-          data.message ||
-          '查無符合的訂單。',
+          data.message || '查無符合的訂單。',
           'error'
         );
 
         return;
-
       }
 
 
       const orders =
-        Array.isArray(
-          data.orders
-        )
-          ?
-          data.orders
-          :
-          [];
+        Array.isArray(data.orders)
+          ? data.orders
+          : [];
 
 
-      if (
-        orders.length ===
-        0
-      ) {
+      if (orders.length === 0) {
 
         showMessage(
           '查無符合的訂單，請確認姓名或代碼是否正確。',
@@ -1479,27 +938,18 @@ function searchOrders() {
         );
 
         return;
-
       }
 
 
-      currentOrders =
-        orders;
+      currentOrders = orders;
 
-
-      renderOrders(
-        orders
-      );
+      renderOrders(orders);
 
 
       document
-        .getElementById(
-          'resultToolbar'
-        )
+        .getElementById('resultToolbar')
         .classList
-        .add(
-          'show'
-        );
+        .add('show');
 
 
       document.getElementById(
@@ -1514,49 +964,30 @@ function searchOrders() {
         function () {
 
           document
-            .getElementById(
-              'resultToolbar'
-            )
-            .scrollIntoView(
-              {
-                behavior:
-                  'smooth',
-
-                block:
-                  'start'
-              }
-            );
+            .getElementById('resultToolbar')
+            .scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
 
         },
         100
       );
-
     },
-
 
     function (error) {
 
-      console.error(
-        error
-      );
+      console.error(error);
 
-
-      searchBtn.disabled =
-        false;
-
-      searchBtn.textContent =
-        '查詢訂單';
-
+      searchBtn.disabled = false;
+      searchBtn.textContent = '查詢訂單';
 
       showMessage(
         '目前無法連線到訂單系統，請稍後再試。',
         'error'
       );
-
     }
-
   );
-
 }
 
 
@@ -1574,54 +1005,37 @@ function jsonpRequest(
     '__orderCallback_' +
     Date.now() +
     '_' +
-    Math.floor(
-      Math.random() *
-      1000000
-    );
+    Math.floor(Math.random() * 1000000);
 
 
   const script =
-    document.createElement(
-      'script'
-    );
+    document.createElement('script');
 
 
-  let completed =
-    false;
+  let completed = false;
 
 
   const timer =
     setTimeout(
       function () {
 
-        if (
-          completed
-        ) {
+        if (completed) {
           return;
         }
 
-
-        completed =
-          true;
-
+        completed = true;
 
         cleanup();
 
-
         if (
-          typeof
-          errorCallback ===
+          typeof errorCallback ===
           'function'
         ) {
 
           errorCallback(
-            new Error(
-              'API 連線逾時'
-            )
+            new Error('API 連線逾時')
           );
-
         }
-
       },
       20000
     );
@@ -1629,72 +1043,46 @@ function jsonpRequest(
 
   function cleanup() {
 
-    clearTimeout(
-      timer
-    );
-
+    clearTimeout(timer);
 
     try {
 
-      delete window[
-        callbackName
-      ];
+      delete window[callbackName];
 
     } catch (error) {
 
-      window[
-        callbackName
-      ] =
+      window[callbackName] =
         undefined;
-
     }
 
 
-    if (
-      script.parentNode
-    ) {
+    if (script.parentNode) {
 
-      script.parentNode
-        .removeChild(
-          script
-        );
-
+      script.parentNode.removeChild(
+        script
+      );
     }
-
   }
 
 
-  window[
-    callbackName
-  ] =
+  window[callbackName] =
     function (data) {
 
-      if (
-        completed
-      ) {
+      if (completed) {
         return;
       }
 
-
-      completed =
-        true;
-
+      completed = true;
 
       cleanup();
 
-
       if (
-        typeof
-        successCallback ===
+        typeof successCallback ===
         'function'
       ) {
 
-        successCallback(
-          data
-        );
-
+        successCallback(data);
       }
-
     };
 
 
@@ -1702,16 +1090,13 @@ function jsonpRequest(
     new URLSearchParams();
 
 
-  Object.keys(
-    params
-  ).forEach(
+  Object.keys(params).forEach(
     function (key) {
 
       query.append(
         key,
         params[key]
       );
-
     }
   );
 
@@ -1720,7 +1105,6 @@ function jsonpRequest(
     'callback',
     callbackName
   );
-
 
   query.append(
     '_',
@@ -1733,31 +1117,22 @@ function jsonpRequest(
     '?' +
     query.toString();
 
-
-  script.async =
-    true;
+  script.async = true;
 
 
   script.onerror =
     function () {
 
-      if (
-        completed
-      ) {
+      if (completed) {
         return;
       }
 
-
-      completed =
-        true;
-
+      completed = true;
 
       cleanup();
 
-
       if (
-        typeof
-        errorCallback ===
+        typeof errorCallback ===
         'function'
       ) {
 
@@ -1766,117 +1141,98 @@ function jsonpRequest(
             'API 載入失敗'
           )
         );
-
       }
-
     };
 
 
-  document.head
-    .appendChild(
-      script
-    );
-
+  document.head.appendChild(
+    script
+  );
 }
 
 
 /* =========================================================
-   顯示所有訂單
+   顯示訂單
    ========================================================= */
 
-function renderOrders(
-  orders
-) {
+function renderOrders(orders) {
 
   const screen =
     document.getElementById(
       'screenOrders'
     );
 
-
-  screen.innerHTML =
-    '';
+  screen.innerHTML = '';
 
 
   orders.forEach(
-    function (
-      order
-    ) {
+    function (order) {
 
       screen.insertAdjacentHTML(
         'beforeend',
-        createScreenCard(
-          order
-        )
+        createScreenCard(order)
       );
-
     }
   );
 
 
-  buildPrintPages(
-    orders
-  );
-
+  buildPrintPages(orders);
 }
 
 
 /* =========================================================
-   網頁訂單卡片
+   網頁訂單
    ========================================================= */
 
-function createScreenCard(
-  order
-) {
+function createScreenCard(order) {
 
   const color =
     order.color ||
     (
-      order.type ===
-      'pomelo'
-        ?
-        '#4f7d37'
-        :
-        '#a95b29'
+      order.type === 'pomelo'
+        ? '#4f7d37'
+        : '#a95b29'
     );
 
 
   const title =
-    order.type ===
-    'pomelo'
-      ?
-      '🍐 文旦訂單'
-      :
-      '🥮 中秋月餅訂單';
+    order.type === 'pomelo'
+      ? '🍐 文旦訂單'
+      : '🥮 中秋月餅訂單';
 
 
   let html =
-    '<article ' +
-    'class="order-card" ' +
+    '<article class="order-card" ' +
     'style="--order-color:' +
-    escapeHtml(
-      color
-    ) +
+    escapeHtml(color) +
     ';">';
 
 
   html +=
-    '<div class="order-title">' +
+    '<div class="order-header">' +
 
-      '<span class="order-type-dot"></span>' +
+      '<div class="order-title">' +
 
-      '<span>' +
-        title +
-      '</span>' +
+        '<span class="order-type-dot"></span>' +
+
+        '<span>' +
+          title +
+        '</span>' +
+
+      '</div>' +
+
+      '<div class="done-box">' +
+
+        '<span class="done-square"></span>' +
+
+        '<span>已打單</span>' +
+
+      '</div>' +
 
     '</div>';
 
 
-  if (
-    hasText(
-      order.timestamp
-    )
-  ) {
+  if (hasText(order.timestamp)) {
 
     html +=
       screenInfoRow(
@@ -1884,15 +1240,10 @@ function createScreenCard(
         order.timestamp,
         false
       );
-
   }
 
 
-  if (
-    hasText(
-      order.customerName
-    )
-  ) {
+  if (hasText(order.customerName)) {
 
     html +=
       screenInfoRow(
@@ -1900,15 +1251,10 @@ function createScreenCard(
         order.customerName,
         true
       );
-
   }
 
 
-  if (
-    hasText(
-      order.pickupDate
-    )
-  ) {
+  if (hasText(order.pickupDate)) {
 
     html +=
       screenInfoRow(
@@ -1916,20 +1262,12 @@ function createScreenCard(
         order.pickupDate,
         false
       );
-
   }
 
 
-  /*
-   * 月餅不顯示提貨地點
-   */
-
   if (
-    order.type ===
-      'pomelo' &&
-    hasText(
-      order.pickupLocation
-    )
+    order.type === 'pomelo' &&
+    hasText(order.pickupLocation)
   ) {
 
     html +=
@@ -1938,15 +1276,10 @@ function createScreenCard(
         order.pickupLocation,
         false
       );
-
   }
 
 
-  if (
-    hasText(
-      order.note
-    )
-  ) {
+  if (hasText(order.note)) {
 
     html +=
       screenInfoRow(
@@ -1954,14 +1287,11 @@ function createScreenCard(
         order.note,
         false
       );
-
   }
 
 
   html +=
-    createScreenProducts(
-      order
-    );
+    createScreenProducts(order);
 
 
   html +=
@@ -1972,25 +1302,20 @@ function createScreenCard(
       '</span>' +
 
       '<span class="total-amount">' +
-        formatMoney(
-          order.amount
-        ) +
+        formatMoney(order.amount) +
       '</span>' +
 
     '</div>';
 
 
-  html +=
-    '</article>';
-
+  html += '</article>';
 
   return html;
-
 }
 
 
 /* =========================================================
-   網頁資料列
+   畫面資料列
    ========================================================= */
 
 function screenInfoRow(
@@ -2000,63 +1325,44 @@ function screenInfoRow(
 ) {
 
   return (
-
     '<div class="info-row">' +
 
       '<span class="info-label">' +
-        escapeHtml(
-          label
-        ) +
+        escapeHtml(label) +
       '</span>' +
 
       '<span class="info-value' +
         (
           customer
-            ?
-            ' customer-value'
-            :
-            ''
+            ? ' customer-value'
+            : ''
         ) +
       '">' +
 
-        escapeHtml(
-          value
-        ) +
+        escapeHtml(value) +
 
       '</span>' +
 
     '</div>'
-
   );
-
 }
 
 
 /* =========================================================
-   網頁商品
+   畫面商品
    ========================================================= */
 
-function createScreenProducts(
-  order
-) {
+function createScreenProducts(order) {
 
   const products =
-    Array.isArray(
-      order.products
-    )
-      ?
-      order.products
-      :
-      [];
+    Array.isArray(order.products)
+      ? order.products
+      : [];
 
 
-  if (
-    products.length ===
-    0
-  ) {
+  if (products.length === 0) {
 
     return '';
-
   }
 
 
@@ -2073,28 +1379,22 @@ function createScreenProducts(
 
       const name =
         escapeHtml(
-          product.name ||
-          '商品'
+          product.name || '商品'
         );
-
 
       const qty =
         formatQuantity(
           product.quantity
         );
 
-
       const price =
         Number(
-          product.price ||
-          0
+          product.price || 0
         );
-
 
       const subtotal =
         Number(
-          product.subtotal ||
-          0
+          product.subtotal || 0
         );
 
 
@@ -2104,86 +1404,61 @@ function createScreenProducts(
 
       html +=
         '<div class="product-main">' +
-
           name +
           '：' +
-          escapeHtml(
-            qty
-          ) +
-
+          escapeHtml(qty) +
         '</div>';
 
 
-      if (
-        price >
-        0
-      ) {
+      if (price > 0) {
 
         html +=
           '<div class="product-calculation">' +
 
-            formatMoney(
-              price
-            ) +
+            formatMoney(price) +
 
             ' × ' +
 
-            escapeHtml(
-              qty
-            ) +
+            escapeHtml(qty) +
 
             ' = ' +
 
             '<strong>' +
 
-              formatMoney(
-                subtotal
-              ) +
+              formatMoney(subtotal) +
 
             '</strong>' +
 
           '</div>';
-
       }
 
 
       html +=
         '</div>';
-
     }
   );
 
 
-  html +=
-    '</div>';
-
+  html += '</div>';
 
   return html;
-
 }
 
 
 /* =========================================================
-   ★ 建立列印頁
-   ★ 每頁固定 6 筆
+   列印頁
    ========================================================= */
 
-function buildPrintPages(
-  orders
-) {
+function buildPrintPages(orders) {
 
   const printArea =
     document.getElementById(
       'printArea'
     );
 
+  printArea.innerHTML = '';
 
-  printArea.innerHTML =
-    '';
-
-
-  const perPage =
-    6;
+  const perPage = 6;
 
 
   for (
@@ -2197,7 +1472,6 @@ function buildPrintPages(
         'section'
       );
 
-
     page.className =
       'print-page';
 
@@ -2205,8 +1479,7 @@ function buildPrintPages(
     const pageOrders =
       orders.slice(
         start,
-        start +
-        perPage
+        start + perPage
       );
 
 
@@ -2215,39 +1488,27 @@ function buildPrintPages(
 
         page.insertAdjacentHTML(
           'beforeend',
-          createPrintCard(
-            order
-          )
+          createPrintCard(order)
         );
-
       }
     );
 
 
-    printArea.appendChild(
-      page
-    );
-
+    printArea.appendChild(page);
   }
-
 }
 
 
 /* =========================================================
-   ★ 列印卡片
+   列印卡片
    ========================================================= */
 
-function createPrintCard(
-  order
-) {
+function createPrintCard(order) {
 
   const title =
-    order.type ===
-    'pomelo'
-      ?
-      '文旦訂單'
-      :
-      '中秋月餅訂單';
+    order.type === 'pomelo'
+      ? '🍐 文旦訂單'
+      : '🥮 中秋月餅訂單';
 
 
   let html =
@@ -2255,22 +1516,30 @@ function createPrintCard(
 
 
   html +=
-    '<div class="print-order-title">' +
+    '<div class="print-header">' +
 
-      '<span class="print-dot"></span>' +
+      '<div class="print-order-title">' +
 
-      '<span>' +
-        title +
-      '</span>' +
+        '<span class="print-dot"></span>' +
+
+        '<span>' +
+          title +
+        '</span>' +
+
+      '</div>' +
+
+      '<div class="print-done">' +
+
+        '<span class="print-done-square"></span>' +
+
+        '<span>已打單</span>' +
+
+      '</div>' +
 
     '</div>';
 
 
-  if (
-    hasText(
-      order.timestamp
-    )
-  ) {
+  if (hasText(order.timestamp)) {
 
     html +=
       printInfoRow(
@@ -2278,15 +1547,10 @@ function createPrintCard(
         order.timestamp,
         false
       );
-
   }
 
 
-  if (
-    hasText(
-      order.customerName
-    )
-  ) {
+  if (hasText(order.customerName)) {
 
     html +=
       printInfoRow(
@@ -2294,15 +1558,10 @@ function createPrintCard(
         order.customerName,
         true
       );
-
   }
 
 
-  if (
-    hasText(
-      order.pickupDate
-    )
-  ) {
+  if (hasText(order.pickupDate)) {
 
     html +=
       printInfoRow(
@@ -2310,20 +1569,12 @@ function createPrintCard(
         order.pickupDate,
         false
       );
-
   }
 
 
-  /*
-   * ★ 只有文旦顯示提貨地點
-   */
-
   if (
-    order.type ===
-      'pomelo' &&
-    hasText(
-      order.pickupLocation
-    )
+    order.type === 'pomelo' &&
+    hasText(order.pickupLocation)
   ) {
 
     html +=
@@ -2332,15 +1583,10 @@ function createPrintCard(
         order.pickupLocation,
         false
       );
-
   }
 
 
-  if (
-    hasText(
-      order.note
-    )
-  ) {
+  if (hasText(order.note)) {
 
     html +=
       printInfoRow(
@@ -2348,14 +1594,11 @@ function createPrintCard(
         order.note,
         false
       );
-
   }
 
 
   html +=
-    createPrintProducts(
-      order
-    );
+    createPrintProducts(order);
 
 
   html +=
@@ -2366,20 +1609,15 @@ function createPrintCard(
       '</span>' +
 
       '<span class="print-total-amount">' +
-        formatMoney(
-          order.amount
-        ) +
+        formatMoney(order.amount) +
       '</span>' +
 
     '</div>';
 
 
-  html +=
-    '</article>';
-
+  html += '</article>';
 
   return html;
-
 }
 
 
@@ -2394,63 +1632,44 @@ function printInfoRow(
 ) {
 
   return (
-
     '<div class="print-info-row">' +
 
       '<span class="print-label">' +
-        escapeHtml(
-          label
-        ) +
+        escapeHtml(label) +
       '</span>' +
 
       '<span class="print-value' +
         (
           customer
-            ?
-            ' print-customer'
-            :
-            ''
+            ? ' print-customer'
+            : ''
         ) +
       '">' +
 
-        escapeHtml(
-          value
-        ) +
+        escapeHtml(value) +
 
       '</span>' +
 
     '</div>'
-
   );
-
 }
 
 
 /* =========================================================
-   ★ 列印商品
+   列印商品
    ========================================================= */
 
-function createPrintProducts(
-  order
-) {
+function createPrintProducts(order) {
 
   const products =
-    Array.isArray(
-      order.products
-    )
-      ?
-      order.products
-      :
-      [];
+    Array.isArray(order.products)
+      ? order.products
+      : [];
 
 
-  if (
-    products.length ===
-    0
-  ) {
+  if (products.length === 0) {
 
     return '';
-
   }
 
 
@@ -2467,39 +1686,28 @@ function createPrintProducts(
 
       const name =
         escapeHtml(
-          product.name ||
-          '商品'
+          product.name || '商品'
         );
-
 
       const qty =
         formatQuantity(
           product.quantity
         );
 
-
       const price =
         Number(
-          product.price ||
-          0
+          product.price || 0
         );
-
 
       const subtotal =
         Number(
-          product.subtotal ||
-          0
+          product.subtotal || 0
         );
 
 
       html +=
         '<div class="print-product-row">';
 
-
-      /*
-       * 第一行：
-       * 花蓮老欉文旦/6KG：50
-       */
 
       html +=
         '<div class="print-product-main">' +
@@ -2508,79 +1716,55 @@ function createPrintProducts(
 
           '：' +
 
-          escapeHtml(
-            qty
-          ) +
+          escapeHtml(qty) +
 
         '</div>';
 
 
-      /*
-       * 第二行：
-       * NT$ 550 × 50 = NT$ 27,500
-       */
-
-      if (
-        price >
-        0
-      ) {
+      if (price > 0) {
 
         html +=
           '<div class="print-product-calculation">' +
 
-            formatMoney(
-              price
-            ) +
+            formatMoney(price) +
 
             ' × ' +
 
-            escapeHtml(
-              qty
-            ) +
+            escapeHtml(qty) +
 
             ' = ' +
 
             '<strong>' +
 
-              formatMoney(
-                subtotal
-              ) +
+              formatMoney(subtotal) +
 
             '</strong>' +
 
           '</div>';
-
       }
 
 
       html +=
         '</div>';
-
     }
   );
 
 
-  html +=
-    '</div>';
-
+  html += '</div>';
 
   return html;
-
 }
 
 
 /* =========================================================
-   列印按鈕
+   列印
    ========================================================= */
 
 function printOrders() {
 
   if (
-    !Array.isArray(
-      currentOrders
-    ) ||
-    currentOrders.length ===
-    0
+    !Array.isArray(currentOrders) ||
+    currentOrders.length === 0
   ) {
 
     showMessage(
@@ -2589,18 +1773,10 @@ function printOrders() {
     );
 
     return;
-
   }
 
 
-  /*
-   * 列印前重新建立，
-   * 防止舊資料。
-   */
-
-  buildPrintPages(
-    currentOrders
-  );
+  buildPrintPages(currentOrders);
 
 
   setTimeout(
@@ -2611,7 +1787,6 @@ function printOrders() {
     },
     150
   );
-
 }
 
 
@@ -2621,9 +1796,7 @@ function printOrders() {
 
 function searchAgain() {
 
-  currentOrders =
-    [];
-
+  currentOrders = [];
 
   clearResults();
 
@@ -2635,19 +1808,13 @@ function searchAgain() {
       'keyword'
     );
 
-
-  keyword.value =
-    '';
+  keyword.value = '';
 
 
-  window.scrollTo(
-    {
-      top: 0,
-
-      behavior:
-        'smooth'
-    }
-  );
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 
 
   setTimeout(
@@ -2658,48 +1825,38 @@ function searchAgain() {
     },
     300
   );
-
 }
 
 
 /* =========================================================
-   清除結果
+   清除
    ========================================================= */
 
 function clearResults() {
 
   document.getElementById(
     'screenOrders'
-  ).innerHTML =
-    '';
-
+  ).innerHTML = '';
 
   document.getElementById(
     'printArea'
-  ).innerHTML =
-    '';
-
+  ).innerHTML = '';
 
   document.getElementById(
     'resultSummary'
-  ).textContent =
-    '';
-
+  ).textContent = '';
 
   document
     .getElementById(
       'resultToolbar'
     )
     .classList
-    .remove(
-      'show'
-    );
-
+    .remove('show');
 }
 
 
 /* =========================================================
-   顯示訊息
+   訊息
    ========================================================= */
 
 function showMessage(
@@ -2712,24 +1869,13 @@ function showMessage(
       'message'
     );
 
-
-  element.textContent =
-    text;
-
+  element.textContent = text;
 
   element.className =
     'message show ' +
-    (
-      type ||
-      'info'
-    );
-
+    (type || 'info');
 }
 
-
-/* =========================================================
-   隱藏訊息
-   ========================================================= */
 
 function hideMessage() {
 
@@ -2738,139 +1884,81 @@ function hideMessage() {
       'message'
     );
 
-
-  element.textContent =
-    '';
-
+  element.textContent = '';
 
   element.className =
     'message';
-
 }
 
 
 /* =========================================================
-   金額格式
+   金額
    ========================================================= */
 
-function formatMoney(
-  value
-) {
+function formatMoney(value) {
 
   let number =
-    Number(
-      value ||
-      0
-    );
+    Number(value || 0);
 
 
-  if (
-    !Number.isFinite(
-      number
-    )
-  ) {
+  if (!Number.isFinite(number)) {
 
-    number =
-      0;
-
+    number = 0;
   }
 
 
   return (
     'NT$ ' +
-    Math.round(
-      number
-    ).toLocaleString(
-      'zh-TW'
-    )
+    Math.round(number)
+      .toLocaleString('zh-TW')
   );
-
 }
 
 
 /* =========================================================
-   數量格式
+   數量
    ========================================================= */
 
-function formatQuantity(
-  value
-) {
+function formatQuantity(value) {
 
   const number =
-    Number(
-      value
-    );
+    Number(value);
 
 
-  if (
-    Number.isFinite(
-      number
-    )
-  ) {
+  if (Number.isFinite(number)) {
 
-    if (
-      Number.isInteger(
-        number
-      )
-    ) {
-
-      return String(
-        number
-      );
-
-    }
-
-
-    return String(
-      number
-    );
-
+    return String(number);
   }
 
 
-  return String(
-    value ||
-    ''
-  );
-
+  return String(value || '');
 }
 
 
 /* =========================================================
-   是否有內容
+   有沒有內容
    ========================================================= */
 
-function hasText(
-  value
-) {
+function hasText(value) {
 
   if (
-    value ===
-    null ||
-    value ===
-    undefined
+    value === null ||
+    value === undefined
   ) {
 
     return false;
-
   }
 
 
   const text =
-    String(
-      value
-    ).trim();
+    String(value).trim();
 
 
   return (
-    text !==
-    '' &&
-    text !==
-    '-' &&
-    text !==
-    '無'
+    text !== '' &&
+    text !== '-' &&
+    text !== '無'
   );
-
 }
 
 
@@ -2878,46 +1966,19 @@ function hasText(
    HTML 安全
    ========================================================= */
 
-function escapeHtml(
-  value
-) {
+function escapeHtml(value) {
 
   return String(
-    value ===
-      null ||
-    value ===
-      undefined
-      ?
-      ''
-      :
-      value
+    value === null ||
+    value === undefined
+      ? ''
+      : value
   )
-
-  .replace(
-    /&/g,
-    '&amp;'
-  )
-
-  .replace(
-    /</g,
-    '&lt;'
-  )
-
-  .replace(
-    />/g,
-    '&gt;'
-  )
-
-  .replace(
-    /"/g,
-    '&quot;'
-  )
-
-  .replace(
-    /'/g,
-    '&#039;'
-  );
-
+  .replace(/&/g,'&amp;')
+  .replace(/</g,'&lt;')
+  .replace(/>/g,'&gt;')
+  .replace(/"/g,'&quot;')
+  .replace(/'/g,'&#039;');
 }
 
 </script>
